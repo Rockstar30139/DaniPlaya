@@ -1,0 +1,12 @@
+How to use:
+Install python (and add to path at the installer)
+Run Setup.bat (at the first time running)
+
+Run Start.bat to launch the bot (it will ask bot token)
+
+
+
+-problems:
+You don't have an bot token? --> make an app and then a bot on this page: https://discord.com/developers/applications or dm me: NΘISS#6149
+You have something insanely strange error and you don't know what to do? --> dm me: NΘISS#6149
+You have an problem with something else? --> search the problem on google or dm me: NΘISS#6149
