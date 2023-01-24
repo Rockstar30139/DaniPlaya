@@ -109,19 +109,14 @@ if exists("dani.conf")==True:
 else:
     
     key=input("Enter BOT token:")
-
+    clear()
+    logo()
     for i in range(9):
         key = base64.b64encode(key.encode()).decode() #very basic token protection
 
     f1=open("dani.conf","w")
     print(key,file=f1)
     f1.close()
-
-#check if ffmpeg.exe is at C/ffmpeg/bin
-if str(path.exists('C:/ffmpeg/bin/')) == True:
-    print("ffmpeg.exe found at C:/ffmpeg/bin")
-else:
-    print(f"ffmpeg.exe not found in C:/ffmpeg/bin") # this has an strange bug idk why
 
 @client.event
 async def on_ready():
@@ -422,7 +417,7 @@ async def play_next(message):
             # connect to the voice channel
             voice_client = await voice_channel.connect()
         # play the audio file
-        source = discord.FFmpegPCMAudio("base.mp3", executable='C:/ffmpeg/bin/ffmpeg.exe')
+        source = discord.FFmpegPCMAudio("base.mp3", executable='ffmpeg.exe')
         vc = client.voice_clients[0]
         server = message.guild
         channel = message.channel
