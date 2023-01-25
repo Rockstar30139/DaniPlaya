@@ -1,5 +1,6 @@
 How to use:
 Install python (and add to path at the installer)
+Put ffmpeg.exe into the same directory DaniPlaya is in (only if you are running the raw script)
 Run Setup.bat (at the first time running)
 
 Run Start.bat to launch the bot (it will ask bot token)
