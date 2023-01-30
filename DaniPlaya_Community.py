@@ -3,7 +3,7 @@
 from colorama import init as colorama_init
 from colorama import Fore
 from colorama import Style
-import os
+
 from os import system, name
 import discord
 import youtube_dl
@@ -15,6 +15,7 @@ import base64
 import time
 from bs4 import BeautifulSoup
 import asyncio
+import os
 from youtubesearchpython.__future__ import VideosSearch
 import os.path
 from os import path
