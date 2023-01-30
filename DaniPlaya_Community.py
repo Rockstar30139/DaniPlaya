@@ -24,13 +24,12 @@ colorama_init()
 #----------variables----------
 
 key=""
-client = discord.Client(intents=discord.Intents.all())
 queue=[]
 song=""
 semmi=""
 song_publisher=""
-interest="0"
 current_requester = ""
+client = discord.Client(intents=discord.Intents.all())
 
 #get-random-songs
 page_url = "https://beats-rhymes-lists.com/lists/50-greatest-rappers-of-all-time/"
@@ -50,22 +49,21 @@ song_elements = soup.select("p em")
 for element in song_elements:
   song_name = element.text.strip()
   song_names.append(song_name)
-
 s = os.get_terminal_size()
 
 def logo():
-        print(f"""{Fore.GREEN}{Style.BRIGHT} _____              _ _____  _                        """.center(int(s.columns)," "))
-        print(f"""{Fore.GREEN}{Style.BRIGHT}|  __ \            (_)  __ \| |                       """.center(int(s.columns)," "))
-        print(f"""{Fore.GREEN}{Style.BRIGHT}| |  | | __ _ _ __  _| |__) | | __ _ _   _  __ _      """.center(int(s.columns)," "))
-        print(f"""{Fore.GREEN}{Style.BRIGHT}| |  | |/ _` | '_ \| |  ___/| |/ _` | | | |/ _` |     """.center(int(s.columns)," "))
-        print(f"""{Fore.GREEN}{Style.BRIGHT}| |__| | (_| | | | | | |    | | (_| | |_| | (_| |     """.center(int(s.columns)," "))
-        print(f"""{Fore.GREEN}{Style.BRIGHT}|_____/ \__,_|_| |_|_|_|    |_|\__,_|\__, |\__,_|     """.center(int(s.columns)," "))
-        print(f"""{Fore.GREEN}{Style.BRIGHT}             _____       _     _ _    __/ |           """.center(int(s.columns)," "))
-        print(f"""{Fore.GREEN}{Style.BRIGHT}            |  __ \     | |   | (_)  |___/            """.center(int(s.columns)," "))
-        print(f"""{Fore.GREEN}{Style.BRIGHT}      ______| |__) |   _| |__ | |_  ___               """.center(int(s.columns)," "))
-        print(f"""{Fore.GREEN}{Style.BRIGHT}     |______|  ___/ | | | '_ \| | |/ __|              """.center(int(s.columns)," "))
-        print(f"""{Fore.GREEN}{Style.BRIGHT}            | |   | |_| | |_) | | | (__ X             """.center(int(s.columns)," "))
-        print(f"""{Fore.GREEN}{Style.BRIGHT}            |_|    \__,_|_.__/|_|_|\___|              """.center(int(s.columns)," "))
+        print(f"""{Fore.GREEN}{Style.BRIGHT} _____              _ _____  _                   """.center(int(s.columns)," "))
+        print(f"""{Fore.GREEN}{Style.BRIGHT}|  __ \            (_)  __ \| |                  """.center(int(s.columns)," "))
+        print(f"""{Fore.GREEN}{Style.BRIGHT}| |  | | __ _ _ __  _| |__) | | __ _ _   _  __ _ """.center(int(s.columns)," "))
+        print(f"""{Fore.GREEN}{Style.BRIGHT}| |  | |/ _` | '_ \| |  ___/| |/ _` | | | |/ _` |""".center(int(s.columns)," "))
+        print(f"""{Fore.GREEN}{Style.BRIGHT}| |__| | (_| | | | | | |    | | (_| | |_| | (_| |""".center(int(s.columns)," "))
+        print(f"""{Fore.GREEN}{Style.BRIGHT}|_____/ \__,_|_| |_|_|_|    |_|\__,_|\__, |\__,_|""".center(int(s.columns)," "))
+        print(f"""{Fore.GREEN}{Style.BRIGHT}             _____       _     _ _    __/ |      """.center(int(s.columns)," "))
+        print(f"""{Fore.GREEN}{Style.BRIGHT}            |  __ \     | |   | (_)  |___/       """.center(int(s.columns)," "))
+        print(f"""{Fore.GREEN}{Style.BRIGHT}      ______| |__) |   _| |__ | |_  ___          """.center(int(s.columns)," "))
+        print(f"""{Fore.GREEN}{Style.BRIGHT}     |______|  ___/ | | | '_ \| | |/ __|         """.center(int(s.columns)," "))
+        print(f"""{Fore.GREEN}{Style.BRIGHT}            | |   | |_| | |_) | | | (__ X        """.center(int(s.columns)," "))
+        print(f"""{Fore.GREEN}{Style.BRIGHT}            |_|    \__,_|_.__/|_|_|\___|         """.center(int(s.columns)," "))
         print(f"""{Fore.GREEN}{Style.BRIGHT}""")
         print(f"""{Fore.GREEN}{Style.BRIGHT}{Style.RESET_ALL}""")
 
@@ -100,7 +98,7 @@ if input(f'Type {Style.BRIGHT}"accept"{Style.RESET_ALL}, to accept it:') != "acc
 clear()
 
 logo()
-print("Songs Loaded:",len(song_names))
+
 from os.path import exists
 
 if exists("dani.conf")==True:
@@ -118,7 +116,7 @@ else:
     f1=open("dani.conf","w")
     print(key,file=f1)
     f1.close()
-
+print("Songs Loaded:",len(song_names))
 @client.event
 async def on_ready():
 
