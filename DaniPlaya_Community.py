@@ -1,3 +1,5 @@
+#Script by NΘISS
+#https://github.com/Noisec/DaniPlaya
 
 #----------imports----------
 from colorama import init as colorama_init
