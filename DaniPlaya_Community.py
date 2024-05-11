@@ -438,7 +438,7 @@ async def play_next(message):
         vc.play(source)#playing the song
         
     else:
-        print("! The user not in a voice channel !")
+        print("! The user is not in a voice channel !")
 
 
 
