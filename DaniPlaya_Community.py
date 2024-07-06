@@ -89,7 +89,7 @@ logo()
 print()
 
 print(("-"*60).center(int(s.columns)," "))
-print(f"{Style.BRIGHT}"+"Script by NΘISS#6149 | https://github.com/Noisec/DaniPlaya".center(s.columns," ")+f"{Style.RESET_ALL}",end="")
+print(f"{Style.BRIGHT}"+"Script by rockstar.fr".center(s.columns," ")+f"{Style.RESET_ALL}",end="")
 print(("-"*60).center(int(s.columns)," "))
 print()
 print(f"{Fore.YELLOW}Me, as the creator of this script I don't take any responsibility for anything you do with this script. This is for education purposes only. (Discord music bots are not align with the YouTube Terms of Service and/or the YouTube API Terms of Service){Style.RESET_ALL}")
